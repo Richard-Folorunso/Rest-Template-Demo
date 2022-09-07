@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 @Service
-public class RestService {
+public class UserService {
 
     RestTemplate restTemplate = new RestTemplate();
     @Value("${base.url}")
