@@ -1,6 +1,7 @@
 package dev.folorunso.controllers;
 
 import dev.folorunso.models.User;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,8 @@ import java.util.List;
 public class RestController {
 
     RestTemplate rt = new RestTemplate();
-    String baseURL = "http://localhost:8080/users";
+    @Value("${base.url}")
+    String baseURL;
 
     @GetMapping("/users")
     public ResponseEntity<List<User>> getAllUsers() {
