@@ -15,7 +15,7 @@ public class UserService {
     String serverURL;
 
 
-    public List getAllUsers() {
+    public List<User> getAllUsers() {
         return restTemplate.getForObject(serverURL, List.class);
     }
 
